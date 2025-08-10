@@ -1,7 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { portfolioData } from "../config";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
+
 
 const SERVICE_ID = "service_a9pqkor";
 const TEMPLATE_ID = "template_abc123";
