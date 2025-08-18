@@ -5,26 +5,6 @@ export const portfolioData = {
   email: "muhammadasifansari101@gmail.com",
   github: "https://github.com/Muhammad-Asif-Ansari",
   linkedin: "https://www.linkedin.com/in/muhammad-asif-ansari-833045289/",
- skills: [
-  "HTML5",
-  "CSS3",
-  "JavaScript (ES6)",
-  "React.js",
-  "Material UI",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Firebase",
-  "Supabase",
-  "Tailwind CSS",
-  "Redux Toolkit",
-  "Git",
-  "GitHub",
-  "NPM",
-  "Yarn",
-  "Vercel",
-  "Netlify"
-],
 
   projects: [
     {
@@ -44,7 +24,7 @@ export const portfolioData = {
     {
       title: "Login/Signup System",
       desc: "User authentication system using Firebase and Supabase with a clean and responsive React interface.",
-      tech: ["React.js", "Firebase", "Supabase", "Tailwind CSS", "GitHub"],
+      tech: ["HTML5", "CSS3", "JavaScript", "Firebase", "Supabase", "GitHub"],
       live: "https://login-signup-crud-app.vercel.app/",
       github: "https://github.com/Muhammad-Asif-Ansari/Login-Signup-Crud-App.git"
     },
@@ -58,7 +38,7 @@ export const portfolioData = {
     {
       title: "CRUD Operation with Firebase",
       desc: "A React app implementing create, read, update, and delete operations using Firebase as the backend.",
-      tech: ["React.js", "Firebase", "Tailwind CSS", "GitHub"],
+      tech: ["HTML", "CSS", "Javascript", "Firebase", "GitHub"],
       live: "https://crud-operation-firebase.vercel.app/",
       github: "https://github.com/Muhammad-Asif-Ansari/Crud-Operation-Firebase-.git"
     },
@@ -72,7 +52,7 @@ export const portfolioData = {
     {
       title: "E-commerce Website",
       desc: "A fully responsive e-commerce website built with React, featuring product listings, categories, and a shopping cart system.",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "GitHub"],
+      tech: ["React.js", "Tailwind CSS", "GitHub"],
       live: "https://ecommerce-project-lemon.vercel.app/",
       github: "https://github.com/Muhammad-Asif-Ansari/ecommerce-project.git"
     },
@@ -84,13 +64,13 @@ export const portfolioData = {
       github: "https://github.com/Muhammad-Asif-Ansari/Todo-app.git"
     },
     {
-  title: "Calculator",
-  desc: "A simple and responsive calculator built using HTML, CSS, and JavaScript, capable of performing basic arithmetic operations with a clean UI.",
-  tech: ["HTML", "CSS", "JavaScript", "GitHub"],
-  live: "https://assignment-javascript-calculator.vercel.app/",
-  github: "https://github.com/Muhammad-Asif-Ansari/Assignment-Javascript-Calculator.git"
-}
+      title: "Calculator",
+      desc: "A simple and responsive calculator built using HTML, CSS, and JavaScript, capable of performing basic arithmetic operations with a clean UI.",
+      tech: ["HTML", "CSS", "JavaScript", "GitHub"],
+      live: "https://assignment-javascript-calculator.vercel.app/",
+      github: "https://github.com/Muhammad-Asif-Ansari/Assignment-Javascript-Calculator.git"
+    }
 
-    
+
   ]
 };

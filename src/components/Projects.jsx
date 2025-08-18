@@ -39,58 +39,58 @@ export default function Projects() {
   const enhancedProjects = [
     {
       ...portfolioData.projects[0],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ["HTML5", "CSS3", "JavaScript", "API", "GitHub"],
       image: weatherApp,
       description: 'A real-time weather application that provides current weather conditions, forecasts, and interactive maps using modern APIs and responsive design.'
     },
     {
       ...portfolioData.projects[1],
-      tech: ['React', 'Firebase', 'Tailwind CSS'],
+      tech: ["HTML5", "CSS3", "JavaScript", "GitHub"],
       image: DigitalClock,
       description: 'A full-featured e-commerce platform with user authentication, product management, shopping cart functionality, and secure payment processing.'
     },
     {
       ...portfolioData.projects[2],
-      tech: ['React', 'Supabase', 'TypeScript'],
+      tech: ["HTML5", "CSS3", "JavaScript", "Firebase", "Supabase", "GitHub"],
       image: LoginSignup,
       description: 'A comprehensive authentication system with user registration, login, password reset, and role-based access control using modern security practices.'
     },
     {
       ...portfolioData.projects[3],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ["React.js", "Tailwind CSS", "GitHub"],
       image: passwordGenerator,
       description: 'A real-time weather application that provides current weather conditions, forecasts, and interactive maps using modern APIs and responsive design.'
     },
     {
       ...portfolioData.projects[4],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ["HTML", "CSS", "Javascript", "Firebase", "GitHub"],
       image: crudFirebase,
       description: 'A real-time weather application that provides current weather conditions, forecasts, and interactive maps using modern APIs and responsive design.'
     },
     {
       ...portfolioData.projects[5],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ["HTML5", "CSS3", "JavaScript", "GitHub"],
       image: quizApp,
       description: 'A real-time weather application that provides current weather conditions, forecasts, and interactive maps using modern APIs and responsive design.'
     },
-  {
-  ...portfolioData.projects[6],
-  tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-  image: EcommerceStore,
-  description: 'A full-stack e-commerce store with product listings, shopping cart, and secure checkout, built using the MERN stack.'
-},
-{
-  ...portfolioData.projects[7],
-  tech: ['React', 'Material UI'],
-  image: TodoApp,
-  description: 'A responsive todo application built with React and Material UI, featuring task creation, editing, and deletion with a clean, modern interface.'
-},
-{
-  ...portfolioData.projects[8],
-  tech: ['HTML', 'CSS', 'JavaScript'],
-  image: Calculator,
-  description: 'A fully responsive calculator built with HTML, CSS, and JavaScript, capable of performing basic arithmetic operations with a simple and clean interface.'
-}
+    {
+      ...portfolioData.projects[6],
+      tech: ["React.js", "Tailwind CSS", "GitHub"],
+      image: EcommerceStore,
+      description: 'A full-stack e-commerce store with product listings, shopping cart, and secure checkout, built using the MERN stack.'
+    },
+    {
+      ...portfolioData.projects[7],
+      tech: ["React.js", "Material UI", "GitHub"],
+      image: TodoApp,
+      description: 'A responsive todo application built with React and Material UI, featuring task creation, editing, and deletion with a clean, modern interface.'
+    },
+    {
+      ...portfolioData.projects[8],
+      tech: ["HTML", "CSS", "JavaScript", "GitHub"],
+      image: Calculator,
+      description: 'A fully responsive calculator built with HTML, CSS, and JavaScript, capable of performing basic arithmetic operations with a simple and clean interface.'
+    }
 
 
 
@@ -108,9 +108,13 @@ export default function Projects() {
             My Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p
+            className={`text-xl max-w-2xl mx-auto 
+   darkMode ? "text-white" : "text-gray-900"`}
+          >
             Here are some of the projects I've built to showcase my skills and experience
           </p>
+
         </div>
 
         {/* Projects Grid */}

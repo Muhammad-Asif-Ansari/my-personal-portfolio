@@ -16,57 +16,61 @@ export default function Navbar() {
   }, []);
 
   return (
+
     <nav
-      style={{
-        padding: "1rem",
-        backgroundColor: darkMode ? "#111827" : "#fff",
-        color: darkMode ? "#fff" : "#000",
-        display: "flex",
-        justifyContent: "space-between",
-      }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "shadow-lg backdrop-blur-md" : ""
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-lg backdrop-blur-md" : ""
+        } ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-2 w-full">
+      <div className="max-w-7xl mx-auto px-6 py-3 w-full">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
+          {/* Logo / Name */}
+          <h1 className="text-xl md:text-2xl font-bold whitespace-nowrap">
             &lt; {portfolioData.name} /&gt;
           </h1>
 
+          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="flex space-x-6">
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <a href="#contact">Contact</a>
+              <a href="/" className="hover:text-gray-400">Home</a>
+              <a href="#about" className="hover:text-gray-400">About</a>
+              <a href="#projects" className="hover:text-gray-400">Projects</a>
+              <a href="#contact" className="hover:text-gray-400">Contact</a>
             </div>
-
-            <button onClick={toggleTheme}>
-              {darkMode ? "Light Mode 🌞" : "Dark Mode 🌙"}
+            <button
+              onClick={toggleTheme}
+              className="px-3 py-1 rounded-md border hover:bg-gray-700 hover:text-white transition"
+            >
+              {darkMode ? "🌞 Light" : "🌙 Dark"}
             </button>
           </div>
 
-          {/* Mobile button */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 bg-gray-200 dark:bg-gray-100 rounded"
+            className={`lg:hidden p-2 rounded-lg transition transform hover:scale-110 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+              }`}
           >
-            ☰
+            {isMenuOpen ? "✖" : "☰"}
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Dropdown */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-2">
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a><br />
-            <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a><br />
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a><br />
+          <div
+            className={`lg:hidden mt-3 flex flex-col space-y-3  ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+              } p-4 rounded-md`}
+          >
+            <a href="/" onClick={() => setIsMenuOpen(false)}>Home</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
             <button onClick={toggleTheme} className="mt-2">
-              {darkMode ? "Light Mode 🌞" : "Dark Mode 🌙"}
+              {darkMode ? "🌞 Light" : "🌙 Dark"}
             </button>
           </div>
         )}
       </div>
     </nav>
+
   );
 }

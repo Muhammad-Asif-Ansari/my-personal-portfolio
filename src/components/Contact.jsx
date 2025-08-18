@@ -18,10 +18,9 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -54,9 +53,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className={`py-16 px-6 transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
-      }`}
+      className={`py-16 px-6 transition-colors duration-300 ${darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
+        }`}
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8">Get In Touch</h2>
@@ -90,9 +88,8 @@ export default function Contact() {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3 no-underline ${
-                    darkMode ? "text-cyan-300 hover:text-cyan-400" : "text-blue-600 hover:text-blue-800"
-                  } transition-colors duration-300`}
+                  className={`flex items-center gap-3 no-underline ${darkMode ? "text-cyan-300 hover:text-cyan-400" : "text-blue-600 hover:text-blue-800"
+                    } transition-colors duration-300`}
                 >
                   <span className="text-xl">{info.icon}</span>
                   <strong>{info.label}:</strong> <span>{info.value}</span>
@@ -120,11 +117,10 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your name"
-              className={`px-4 py-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${
-                darkMode
+              className={`px-4 py-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${darkMode
                   ? "bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
-              }`}
+                }`}
             />
           </div>
 
@@ -140,11 +136,10 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               placeholder="your.email@example.com"
-              className={`px-4 py-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${
-                darkMode
+              className={`px-4 py-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${darkMode
                   ? "bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
-              }`}
+                }`}
             />
           </div>
 
@@ -160,29 +155,30 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Your message..."
-              className={`px-4 py-3 rounded-md border resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${
-                darkMode
+              className={`px-4 py-3 rounded-md border resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${darkMode
                   ? "bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400"
                   : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
-              }`}
+                }`}
             ></textarea>
           </div>
           <button
-  type="submit"
-  disabled={
-    isSubmitting ||
-    !formData.name.trim() ||
-    !formData.email.trim() ||
-    !formData.message.trim()
-  }
-  className={`py-3 rounded-md font-semibold text-white transition ${
-    isSubmitting
-      ? "bg-blue-700 cursor-not-allowed"
-      : "bg-blue-600 hover:bg-blue-700 cursor-pointer"
-  }`}
->
-  {isSubmitting ? "Sending..." : "Send Message"}
-</button>
+            type="submit"
+            disabled={
+              isSubmitting ||
+              !formData.name.trim() ||
+              !formData.email.trim() ||
+              !formData.message.trim()
+            }
+            className={`py-3 rounded-md font-semibold text-white transition duration-300
+    ${isSubmitting
+                ? "bg-gray-500 cursor-not-allowed"
+                : darkMode
+                  ? "bg-gradient-to-r from-indigo-500 to-purple-600 hover:cursor-pointer"
+                  : "bg-gradient-to-r from-pink-500 to-yellow-500 hover:opacity-90 hover:cursor-pointer"
+              }`}
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
 
         </form>
 

@@ -16,7 +16,7 @@ export default function App() {
       transition: "all 0.3s ease",
       backgroundColor: darkMode ? "#111" : "#fff",
       color: darkMode ? "#fff" : "#111",
-      overflow:"hidden"
+      overflow: "hidden"
     }}>
       <Navbar toggleTheme={toggleTheme} darkMode={darkMode} />
       <Hero />

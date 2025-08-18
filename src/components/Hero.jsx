@@ -8,11 +8,12 @@ export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-    const [slideClass, setSlideClass] = useState("slide-in-left");
+  const [slideClass, setSlideClass] = useState("slide-in-left");
   const { darkMode } = useContext(ThemeContext);
 
   const roles = [
     "Full Stack Developer",
+    "Frontend Developer",
     "React Developer",
     "Node.js Developer",
     "MERN Stack Developer",
@@ -29,10 +30,10 @@ export default function Hero() {
       } else {
         setIsDeleting(false);
         setCurrentIndex((prev) => (prev + 1) % roles.length);
-          setSlideClass("slide-in-left");
+        setSlideClass("slide-in-left");
       }
-    } 
-else {
+    }
+    else {
       if (currentText.length < fullText.length) {
         timeout = setTimeout(() => setCurrentText(fullText.slice(0, currentText.length + 1)), 100);
       } else {
@@ -48,9 +49,8 @@ else {
   return (
     <section
       id="home"
-      className={`section min-h-screen flex items-center transition-colors duration-500 ${
-        darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
-      }`}
+      className={`section min-h-screen flex items-center transition-colors duration-500 ${darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Side - Content */}
@@ -74,9 +74,8 @@ else {
 
             {/* Description */}
             <p
-              className={`max-w-2xl text-lg leading-relaxed ${
-                darkMode ? "text-gray-300" : "text-gray-700"
-              }`}
+              className={`max-w-2xl text-lg leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"
+                }`}
             >
               A passionate Full Stack Software Developer 🚀 with experience
               building Web and Mobile applications using JavaScript, React.js,
@@ -84,9 +83,9 @@ else {
             </p>
           </div>
 
-
-         
-          <div className="flex gap-6">
+          {/* Social Icons + Resume Button */}
+          <div className="flex gap-6 flex-wrap">
+            {/* GitHub */}
             <a
               href={portfolioData.github}
               target="_blank"
@@ -103,7 +102,7 @@ else {
               </svg>
             </a>
 
-         
+            {/* LinkedIn */}
             <a
               href={portfolioData.linkedin}
               target="_blank"
@@ -120,7 +119,7 @@ else {
               </svg>
             </a>
 
-       
+            {/* Email */}
             <a
               href={`mailto:${portfolioData.email}`}
               className="w-14 h-14 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 shadow-lg"
@@ -135,39 +134,35 @@ else {
               </svg>
             </a>
 
-  <div className="flex flex-col items-center gap-6">
-    <a
-      href={Resume}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`flex items-center gap-2 px-5 py-4 rounded-lg font-semibold shadow-md transition-all duration-300 hover:scale-105 ${
-        darkMode
-          ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
-          : "bg-gradient-to-r from-pink-500 to-yellow-500 text-white"
-      }`}
-    >
-   
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-5 h-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
-        />
-      </svg>
-      Download My Resume
-    </a>
-  </div>
-            
+            {/* Resume Button */}
+            <a
+              href={Resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-2 px-5 py-4 rounded-lg font-semibold shadow-md transition-all duration-300 hover:scale-105 ${darkMode
+                  ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+                  : "bg-gradient-to-r from-pink-500 to-yellow-500 text-white"
+                }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                />
+              </svg>
+              Download My Resume
+            </a>
           </div>
         </div>
-<div className="hidden lg:flex justify-center items-center relative right-illustration-animate">
+        <div className="hidden lg:flex justify-center items-center relative right-illustration-animate">
           <div className="relative w-96 h-96">
             {/* Character */}
             <div className="absolute inset-0 flex items-center justify-center">
