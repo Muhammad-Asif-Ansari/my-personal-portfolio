@@ -71,16 +71,20 @@ export default function Hero() {
               {currentText}
               <span className="border-r-4 border-blue-500 animate-blink ml-1"></span>
             </h2>
-
             {/* Description */}
             <p
               className={`max-w-2xl text-lg leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"
                 }`}
             >
-              A passionate Full Stack Software Developer 🚀 with experience
-              building Web and Mobile applications using JavaScript, React.js,
-              Node.js, React Native, and more.
+              A motivated MERN Stack Developer 🚀 skilled in building scalable and
+              responsive web applications. Experienced in working with
+              <span className="font-semibold"> JavaScript (ES6), React.js, Node.js,
+                Express.js, and MongoDB</span>, along with modern tools like
+              <span className="font-semibold"> Firebase, Supabase, Git, and GitHub</span>.
+              Passionate about creating clean, user-friendly UIs and efficient backend
+              systems to deliver seamless digital experiences.
             </p>
+
           </div>
 
           {/* Social Icons + Resume Button */}
@@ -140,8 +144,8 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 px-5 py-4 rounded-lg font-semibold shadow-md transition-all duration-300 hover:scale-105 ${darkMode
-                  ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
-                  : "bg-gradient-to-r from-pink-500 to-yellow-500 text-white"
+                ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+                : "bg-gradient-to-r from-pink-500 to-yellow-500 text-white"
                 }`}
             >
               <svg
